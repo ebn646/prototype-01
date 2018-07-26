@@ -1,0 +1,36 @@
+{
+  "view": "index",
+  "content": {
+    "stylesheet": [],
+    "javascript":[],
+    "meta": {
+      "title": "",
+      "description": "",
+      "keywords": "",
+      "canonical" : "",
+      "image": "",
+      "social": {
+        "fb": {},
+        "twitter": {
+          "card": ""
+        }
+      }
+    },
+    "leadspace": {
+      
+    },
+    "modules": [
+      {
+        "module": "blah",
+        "content": {
+          "name": "name",
+          "title": "title",
+          "img": {
+            "src": "assets/img/test.jpg",
+            "alt": ""
+          }
+        }
+      }
+    ]
+  }
+}

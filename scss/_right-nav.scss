@@ -1,0 +1,27 @@
+.right-nav{
+    width: 50px;
+    height: calc(100% - 10px);
+    border: 1px solid black;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    .nav-container{
+        position: absolute;
+        bottom: 0;
+        border: 1px solid red;
+        width: 100%;
+        display:flex;
+        > span{
+            cursor: pointer;
+            flex: 1;
+            border: 1px solid blue;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+}

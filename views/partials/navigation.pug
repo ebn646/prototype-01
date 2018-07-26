@@ -1,0 +1,31 @@
+.ibm-sitenav-menu-container
+  .ibm-sitenav-menu-name
+    a(href='/') Site Name
+  // local navigation
+  .ibm-sitenav-menu-list
+    ul(role='menubar')
+      li(role='presentation')
+        p.ibm-button-link.ibm-nospacing
+          a.ibm-btn-sec.ibm-btn-blue-50.ibm-btn-small(href='/') Button
+      li(role='presentation')
+        a(href='/', data-altlabel='Nav Item 1') Nav Item 1
+      li(role='presentation')
+        a(role='menuitem', href='/', data-altlabel='Nav Item 2') Nav Item 2
+      li(role='presentation')
+        a(role='menuitem', href='/', data-altlabel='Nav Item 3') Nav Item 3
+      li(role='presentation')
+        a(role='menuitem', href='/', data-altlabel='Nav Item 4') Nav Item 4
+      li(role='presentation')
+        a(role='menuitem', href='/', data-altlabel='Nav Item 5') Nav Item 5
+      li.ibm-haschildlist(role='presentation')
+        button(role='menuitem', tabindex='-1')
+          span  Has Subnav
+        ul(role='menu')
+          li(role='presentation')
+            a(role='menuitem', href='/', data-altlabel='Subnav Item 1') Subnav Item 1
+          li(role='presentation')
+            a(role='menuitem', href='/', data-altlabel='Subnav Item 2') Subnav Item 2
+          li(role='presentation')
+            a(role='menuitem', href='/', data-altlabel='Subnav Item 3') Subnav Item 3
+
+  // end local navigation

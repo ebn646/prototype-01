@@ -1,0 +1,30 @@
+// generate colors for all duo objects. text, borders, buttons, etc
+@mixin duocolors() {
+  @each $colorbase, $colorbasevals in $palette {
+    @each $color, $value in $colorbasevals {
+      $index: index(($colorbasevals), ($color $value));
+      $len: length($colorbasevals);
+      .duo-textcolor-#{$color} {
+        color: $value;
+      }
+      .duo-background-#{$color} {
+        background-color: $value;
+      }
+      .duo-border-#{$color} {
+        border-color: $value;
+      }
+      .duo-btn-#{$color} {
+        &.duo-btn-pri {
+          background-color: $value;
+          border-color: $value;
+          color: color-contrast($value);
+        }
+        &.duo-btn-sec {
+          color: $value;
+          background-color: transparent;
+          border-color: $value;
+        }
+      }
+    }
+  }
+}

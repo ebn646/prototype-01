@@ -1,0 +1,62 @@
+include ./mixins/mixins.pug
+
+doctype html
+html(lang="en")
+    head
+        include ./partials/meta-data.pug
+        block head
+        script.
+            digitalData = {
+                "page":{
+                "category":{
+                    "primaryCategory":"IBMER"
+                },
+                "pageInfo":{
+                    "effectiveDate":"2017-03-13",
+                    "expiryDate":"2020-03-13",
+                    "language":"en-US",
+                    "publishDate":"2017-03-13",
+                    "publisher":"IBM Corporation",
+                    "version":"v18",
+                    "ibm":{
+                    "contentDelivery":"HTML",
+                    "contentProducer":"IBM Northstar Template Generator 2.0",
+                    "country":"US",
+                    "industry":"ZZ",
+                    "owner":"justcook@us.ibm.com",
+                    "siteID":"GLOBAL",
+                    "subject":"IBM000",
+                    "type":"CT###"
+                    }
+                }
+                }
+            };
+        script(src='//1.www.s81c.com/common/stats/ida_stats.js')
+        link(href='//1.www.s81c.com/common/v18/css/www.css', rel='stylesheet')
+        link(href='//1.www.s81c.com/common/v18/css/grid-fluid.css', rel='stylesheet')
+        link(href=`${basepath}styles/site.css`, rel='stylesheet')
+        link(href='/assets/main.css', rel='stylesheet')
+        //- Add content for custon css here
+        script(src='//1.www.s81c.com/common/v18/js/www.js')
+        //- Add content for live person here
+    body#ibm-com.ibm-type
+        #ibm-top.ibm-landing-page
+            #ibm-masthead(role='banner', aria-label='IBM')
+                #ibm-mast-options
+                    ul(role='toolbar', aria-labelledby='ibm-masthead')
+                        li#ibm-geo(role='presentation')
+                        a(href='//www.ibm.com/planetwide/select/selector.html') United States
+                #ibm-universal-nav
+                    nav(aria-label='IBM')
+                        #ibm-home
+                            a(href='//www.ibm.com/us-en/') IBM
+                    ul#ibm-menu-links(role='toolbar', aria-label='Site map')
+                        li
+                            a(href='//www.ibm.com/sitemap/us/en/') Site map
+                    #ibm-search-module(role='search', aria-labelledby='ibm-masthead')
+                        form#ibm-search-form(action='//www.ibm.com/Search/', method='get')
+                            p
+                                label(for='q')
+                                    span.ibm-access Search
+                block content
+            

@@ -1,0 +1,68 @@
+@include duocolors();
+
+/** Duo ratios **/
+[class*=ibm-col-ratio-] {
+  position: relative;
+  padding: 0 !important;
+  .ibm-col-ratio__content {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &:after {
+    content: '';
+  }
+}
+
+.ibm-col-ratio-1-1 {
+  &:after {
+    padding-bottom: 100%;
+  }
+}
+
+.ibm-col-ratio-2-1 {
+  &:after {
+    padding-bottom: 50%;
+  }
+}
+
+.ibm-col-ratio-4-3 {
+  &:after {
+    padding-bottom: 75%;
+  }
+}
+
+/** for end of section template 1 **/
+.end-block {
+  display: block;
+  margin-top: 30px;
+  width: 40px;
+  height: 6px;
+  background: #0062FF!important;
+  // background: color(blue,blue-60); not working
+}
+
+.ibm-pull-quote-open,
+.ibm-pull-quote-close {
+  color: #0062FF;
+}
+
+
+.ibm-small {
+  font-size: 12px;
+  line-height:15px;
+}
+
+.ibm-resize-height {
+  height: 100vw;
+  width: auto;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media (min-width:640px){
+    height: 50vw;
+  }
+  @media (min-width:1024px){
+    height: 37.5vw;
+  }
+}

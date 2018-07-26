@@ -1,0 +1,160 @@
+include ./mixins/mixins.pug
+
+doctype html
+html(lang="en")
+  head
+    include ./partials/meta-data.pug
+    block head
+    script.
+      digitalData = {
+        "page":{
+          "category":{
+            "primaryCategory":"IBMER"
+          },
+          "pageInfo":{
+            "effectiveDate":"2017-03-13",
+            "expiryDate":"2020-03-13",
+            "language":"en-US",
+            "publishDate":"2017-03-13",
+            "publisher":"IBM Corporation",
+            "version":"v18",
+            "ibm":{
+              "contentDelivery":"HTML",
+              "contentProducer":"IBM Northstar Template Generator 2.0",
+              "country":"US",
+              "industry":"ZZ",
+              "owner":"justcook@us.ibm.com",
+              "siteID":"GLOBAL",
+              "subject":"IBM000",
+              "type":"CT###"
+            }
+          }
+        }
+      };
+    script(src='//1.www.s81c.com/common/stats/ida_stats.js')
+    link(href='//1.www.s81c.com/common/v18/css/www.css', rel='stylesheet')
+    link(href='//1.www.s81c.com/common/v18/css/grid-fluid.css', rel='stylesheet')
+    link(href=`${basepath}styles/site.css`, rel='stylesheet')
+
+    //- page-specific css
+    if(content.stylesheet && content.stylesheet != "")
+      <!-- Current Page Required CSS -->
+      for key in content.stylesheet
+        link(rel='stylesheet', href=key)
+      = "\n"
+      <!-- END Current Page Required CSS -->
+
+    script(src='//1.www.s81c.com/common/v18/js/www.js')
+    if(content.liveperson)
+      script(type='text/javascript').
+        IBMCore.common.util.config.set({
+          backtotop: {
+            enabled: true
+          },
+          "masthead":{
+            "type":"alternate"
+          },
+          survey: {
+            global_percent: 0
+          },
+          "sharethispage":{
+            "enabled": true
+          },
+          "footer":{
+            "type":"alternate",
+            "socialLinks":{
+              "enabled":false
+            }
+          },
+          liveperson: {
+            enabled: true,
+            routing: "watson-usen"
+          },
+        });
+    else
+      script(type='text/javascript').
+        IBMCore.common.util.config.set({
+          "masthead":{
+            "type":"alternate"
+          },
+          survey: {
+            global_percent: 0
+          },
+          "sharethispage":{
+            "enabled": true
+          },
+          "footer":{
+            "type":"alternate",
+            "socialLinks":{
+              "enabled":false
+            }
+          }
+        });
+
+  body#ibm-com.ibm-type
+    #ibm-top.ibm-landing-page
+      #ibm-masthead(role='banner', aria-label='IBM')
+        #ibm-mast-options
+          ul(role='toolbar', aria-labelledby='ibm-masthead')
+            li#ibm-geo(role='presentation')
+              a(href='//www.ibm.com/planetwide/select/selector.html') United States
+        #ibm-universal-nav
+          nav(aria-label='IBM')
+            #ibm-home
+              a(href='//www.ibm.com/us-en/') IBM®
+            ul#ibm-menu-links(role='toolbar', aria-label='Site map')
+              li
+                a(href='//www.ibm.com/sitemap/us/en/') Site map
+          #ibm-search-module(role='search', aria-labelledby='ibm-masthead')
+            form#ibm-search-form(action='//www.ibm.com/Search/', method='get')
+              p
+                label(for='q')
+                  span.ibm-access Search
+                input#q(type='text', maxlength='100', value='', name='q')
+                input(type='hidden', value='17', name='v')
+                input(type='hidden', value='utf', name='en')
+                input(type='hidden', value='en', name='lang')
+                input(type='hidden', value='us', name='cc')
+                input#ibm-search.ibm-btn-search(type='submit', value='Submit')
+
+      #ibm-content-wrapper.anchors
+        header
+          //-block sitenav
+            include ./partials/navigation.pug
+        main(role="main" aria-labelledby="ibm-pagetitle-h1")
+          block leadspace
+            block content
+
+      #ibm-footer-modul
+      #footerSliddeContainer.ibm.ibm-marketing(style="background-color: #eaeaea;")
+        footer.ibm-col-group.ibm-col-bleed.duo-nospacing(role='contentinfo', aria-label='IBM')
+          #ibm-footer
+            block page-footer
+
+      if(content.liveperson)
+        #ibm-contact-module
+          h2.ibm-bold Contact IBM
+          h3.ibm-bold Considering a purchase?
+          ul.ibm-live-assistance-list
+            li
+              a.ibm-email-link(href='##__REPACE_ME__##') Email IBM
+            li
+              a.ibm-requestquote-link(href='##__REPACE_ME__##') Request a quote
+            li
+              p.ibm-icon-nolink.ibm-phone-link
+                | Or call us at: 867-5309
+                br
+                span.ibm-priority-code Priority code: abc123
+            li.ibm-feedback-item
+              a.ibm-maximize-link(href='##__REPACE_ME__##') Feedback
+    script(src=`${basepath}js/main.min.js`)
+    //- page-specific javascript
+
+    if(content.javascript && content.javascript != "")
+      = "\n\n"
+      <!-- Current Page Required Javascript -->
+      for key in content.javascript
+        script(src=key)
+      = "\n"
+      <!-- END Current Page Required Javascript -->
+      = "\n\n"

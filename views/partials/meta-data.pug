@@ -1,0 +1,55 @@
+//- override by setting following in locals:
+//- locals.meta = {title: "", description: "", canonical : "", name: ""}
+if(content.meta)
+  - var author = "IBM"
+  - var canonical = content.meta ? content.meta.canonical : "GLOBAL CANONICAL HERE"
+  - var title = content.meta ? content.meta.title : "GLOBAL PAGE TITLE HERE"
+  - var keywords = content.meta ? content.meta.keywords : "KEYWORDS HERE"
+  - var description = content.meta ? content.meta.description : "GLOBAL DESCRIPTION HERE"
+  - var image = content.meta ? content.meta.image : "OG IMAGE HERE" // leave fb.jpg tw.jpg suffix to below
+  - var social = content.meta.social
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  title=title
+  link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+  meta(name='geo.country', content='US')
+  meta(name='dcterms.rights', content='© Copyright IBM Corp. 2017')
+  meta(name='dcterms.date', content='2017-03-13')
+
+  //-  SEO -->
+  //-  http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf -->
+  meta(name="author" content="IBM")
+  meta(name="description" content=description)
+  meta(name="keywords" content=keywords)
+  link(rel="canonical" href=canonical)
+   
+  //-  Social: Twitter -->
+  //-  Head up! You must visit the Twitter Validator and request approval after setting up your Meta tags. -->
+  //-  https://dev.twitter.com/docs/cards -->
+  //-  https://dev.twitter.com/docs/cards/validation/validator -->
+  meta(name="twitter:card" content=social.twitter.card)
+  meta(name="twitter:site" content="@IBM")
+  meta(name="twitter:creator" content="IBM")
+  meta(name="twitter:title" content=social.twitter.title || title)
+  meta(name="twitter:description" content=social.twitter.description || description)
+  meta(name="twitter:image:src" content=social.twitter.image || image)
+  //- twitter:image, twitter:player and twitter:player:stream
+
+  //-  Social: Facebook / Open Graph -->
+  //-  http://ogp.me/ -->
+  //-  https://developers.facebook.com/tools/debug/ -->
+  meta(property="og:url" content=social.fb.shareurl || canonical)
+  meta(property="og:type" content="article")
+  meta(property="og:title" content=social.fb.title || title)
+  meta(property="og:image" content=social.fb.image || image)
+  meta(property="og:description" content=social.fb.description || description)
+  meta(property="og:site_name" content=social.fb.site_name || title)
+  meta(property="article:author" content=canonical)
+  meta(property="article:publisher" content=canonical)
+   
+  //-  Social: Google+ / Schema.org  -->
+  //-  https://schema.org/ -->
+  //-  http://www.google.com/webmasters/tools/richsnippets -->
+  meta(itemprop="name" content=title)
+  meta(itemprop="description" content=meta_description || description)
+  meta(itemprop="image" content=image)

@@ -1,0 +1,49 @@
+.stickynav{
+    position: relative;
+    position: absolute;
+    right: 40px;
+    top: 450px;
+    z-index:2;
+    &.fixed{
+        position:fixed;
+        top: 50px;
+    }
+
+    > li{
+        position: relative;
+        padding-right: 40px;
+        color: #333333;
+        text-align: right;
+        >a{
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 1s linear;
+        }
+        
+        cursor: pointer;
+        &:after{
+            content: '';
+            width: 15px;
+            height: 5px;
+            background: #bbbbbb;
+            position: absolute;
+            right: 0;
+            top:50%;
+            display:inline-block;
+            margin-left: 20px;
+        }
+
+        &.active{
+            &:after{
+                background: #0064ff;
+                width: 24px;
+            }
+        }
+
+        &:hover{
+            a{
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+/** Duo colors **/
+// color palette
+$palette: (
+  core: (
+    black-core: #000,
+    black-10: #070D14,
+    white-core: #fff,
+  ),
+  gray: (
+    gray-10: #F3F3F3,
+    gray-20: #DCDCDC,
+    gray-30: #BEBEBE,
+    gray-40: #A4A4A4,
+    gray-50: #8C8C8C,
+    gray-core: #8C8C8C,
+    gray-60: #6F6F6F,
+    gray-70: #565656,
+    gray-80: #3D3D3D,
+    gray-90: #252525,
+    gray-100: #171717
+  ),
+  cool-gray: (
+    cool-gray-10: #F2F4F8,
+    cool-gray-20: #D8DCE3,
+    cool-gray-30: #B9BFC7,
+    cool-gray-40: #9FA5AD,
+    cool-gray-50: #868D95,
+    cool-gray-core: #868D95,
+    cool-gray-60: #697077,
+    cool-gray-70: #50565B,
+    cool-gray-80: #373D42,
+    cool-gray-90: #202529,
+    cool-gray-100: #13171A
+  ),
+  warm-gray: (
+    warm-gray-10: #F7F3F1,
+    warm-gray-20: #E0DBDA,
+    warm-gray-30: #C1BCBB,
+    warm-gray-40: #A7A2A2,
+    warm-gray-50: #8F8B8B,
+    warm-gray-core: #8F8B8B,
+    warm-gray-60: #726E6E,
+    warm-gray-70: #595555,
+    warm-gray-80: #403C3C,
+    warm-gray-90: #272424,
+    warm-gray-100: #1A1717
+  ),
+  blue: (
+    blue-10: #EDF4FF,
+    blue-20: #C9DEFF, // #69a6ff
+    blue-30: #97C1FF,
+    blue-40: #6EA6FF,
+    blue-50: #418CFF,
+    blue-core: #418CFF,
+    blue-60: #0062FF,
+    blue-70: #054ADA,
+    blue-80: #0530AD,
+    blue-90: #051B75,
+    blue-100: #051243
+  ),
+  cyan: (
+    cyan-10: #E3F6FF,
+    cyan-20: #B3E6FF, // #69a6ff
+    cyan-30: #6CCAFF,
+    cyan-40: #30B0FF,
+    cyan-50: #1193E8,
+    cyan-core: #1193E8,
+    cyan-60: #0072C3,
+    cyan-70: #0058A1,
+    cyan-80: #003D73,
+    cyan-90: #002749,
+    cyan-100: #07192B
+  ),
+  green: (
+    green-10: #DAFBE4,
+    green-20: #9DEEB2, // #69a6ff
+    green-30: #56D679,
+    green-40: #3DBB61,
+    green-50: #24A249,
+    green-core: #24A249,
+    green-60: #198038,
+    green-70: #10642A,
+    green-80: #054719,
+    green-90: #012E0E,
+    green-100: #081B09
+  ),
+  teal: (
+    teal-10: #DBFBFB,
+    teal-20: #87EDED, // #69a6ff
+    teal-30: #20D5D2,
+    teal-40: #00BAB6,
+    teal-50: #009E9A,
+    teal-core: #009E9A,
+    teal-60: #007D79,
+    teal-70: #006161,
+    teal-80: #004548,
+    teal-90: #002B30,
+    teal-100: #081A1C
+  ),
+  purple: (
+    purple-10: #F7F1FF,
+    purple-20: #E6D6FF,
+    purple-30: #D0B0FF,
+    purple-40: #BB8EFF,
+    purple-50: #A970FF,
+    purple-core: #A970FF,
+    purple-60: #8A3FFC,
+    purple-70: #6E32C9,
+    purple-80: #4F2196,
+    purple-90: #321260,
+    purple-100: #1E1033
+  ),
+  magenta: (
+    magenta-10: #FFF0F6,
+    magenta-20: #FFCFE1,
+    magenta-30: #FFA0C2,
+    magenta-40: #FA75A6,
+    magenta-50: #EE538B,
+    magenta-core: #EE538B,
+    magenta-60: #D12765,
+    magenta-70: #A11950,
+    magenta-80: #760A3A,
+    magenta-90: #4F0027,
+    magenta-100: #2A0A16
+  ),
+  red: (
+    red-10: #FFF0F1,
+    red-20: #FCD0D3,
+    red-30: #FFA4A9,
+    red-40: #FF767C,
+    red-50: #FB4B53,
+    red-core: #FB4B53,
+    red-60: #DA1E28,
+    red-70: #A51920,
+    red-80: #750E13,
+    red-90: #4F0408,
+    red-100: #2C080A
+  ),
+  orange: (
+    orange-40: #FC7B1E
+  ),
+  yellow: (
+    yellow-20: #FDD13A
+  )
+);
